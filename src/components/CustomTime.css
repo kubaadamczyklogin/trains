@@ -1,0 +1,19 @@
+.CustomTime {
+  margin: 10px 0;
+}
+
+.CustomTime .button {
+  display: inline-block;
+  width: 40px;
+  padding: 10px 0;
+  margin: 0 3px;
+  border: 1px solid grey;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.CustomTime .result {
+  width: 80px;
+  cursor: default;
+}

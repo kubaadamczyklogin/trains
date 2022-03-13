@@ -1,0 +1,62 @@
+.TrainsTable {
+  overflow: hidden;
+  margin: 10px auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid grey;
+  padding-bottom: 5px;
+}
+
+.TrainsTable th {
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding: 10px 5px 7px;
+  border-bottom: 1px solid grey;
+  font-size: 14px;
+}
+
+.Train td {
+  position: relative;
+  border-bottom: 1px solid lightgrey;
+}
+
+.Train:last-child td {
+  border-bottom: none;
+}
+
+.Train.selected td:after {
+  z-index: 1;
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: lightsalmon;
+}
+
+.Train.suggested td:before {
+  z-index: 0;
+  position: absolute;
+  display: block;
+  content: "";
+  top: -50px;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    rgba(0, 0, 255, 0),
+    rgba(0, 0, 255, 0.2) 20%,
+    rgba(0, 0, 255, 0.2) 80%,
+    rgba(0, 0, 255, 0)
+  );
+}
+
+.Train td span {
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding: 10px 5px;
+}
