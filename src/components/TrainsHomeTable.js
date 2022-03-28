@@ -8,17 +8,17 @@ function TrainHome({
   selected,
   suggested
 }) {
-  const { fromWorkToTrain, fromTorMiaToHome, fromTorGloToHome } = byBikeToTrain;
-  const work = addingMinutes(train.BydBie, -fromWorkToTrain);
+  const { FromWorkToTrain, FromTorMiaToHome, FromTorGloToHome } = byBikeToTrain;
+  const work = addingMinutes(train.BydBie, -FromWorkToTrain);
   let aboutTrain = `odjazd o ${train.BydBie}, do `;
   let home;
 
   if (train.TorMia) {
     aboutTrain += "Toruń Miasto";
-    home = addingMinutes(train.TorMia, fromTorMiaToHome);
+    home = addingMinutes(train.TorMia, FromTorMiaToHome);
   } else {
     aboutTrain += "Toruń Główny";
-    home = addingMinutes(train.TorGlo, fromTorGloToHome);
+    home = addingMinutes(train.TorGlo, FromTorGloToHome);
   }
 
   function handleClick() {

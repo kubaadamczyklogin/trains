@@ -2,16 +2,16 @@ import "./TrainsTable.css";
 import { addingMinutes } from "./../functions";
 
 function TrainToWork({ train, byBikeToTrain, SelectTrainToWork, selected }) {
-  const { fromHomeToTorMia, fromHomeToTorGlo, fromTrainToWork } = byBikeToTrain;
+  const { FromHomeToTorMia, FromHomeToTorGlo, FromTrainToWork } = byBikeToTrain;
   let home;
   let aboutTrain;
-  const work = addingMinutes(train.BydBie, fromTrainToWork);
+  const work = addingMinutes(train.BydBie, FromTrainToWork);
 
   if (train.TorMia) {
-    home = addingMinutes(train.TorMia, -fromHomeToTorMia);
+    home = addingMinutes(train.TorMia, -FromHomeToTorMia);
     aboutTrain = `z Toruń Miasto, odjazd o: ${train.TorMia}`;
   } else {
-    home = addingMinutes(train.TorGlo, -fromHomeToTorGlo);
+    home = addingMinutes(train.TorGlo, -FromHomeToTorGlo);
     aboutTrain = `z Toruń Główny, odjazd o: ${train.TorGlo}`;
   }
 
