@@ -147,7 +147,8 @@ export class App extends React.Component {
       comingHome
     } = this.state;
       return (
-        <div className="App">          
+        <div className="App">   
+          <h1>Dojazdy PKP</h1>       
           <div className="TransportEditor">               
             <TrainsToWorkTable
               trainsToBydgoszcz={this.trainsToBydgoszcz}
